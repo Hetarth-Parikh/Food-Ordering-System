@@ -14,6 +14,10 @@ app.use(require('./router/auth'));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('build'));
+    const path = require('path');
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+    });
 }
 
 app.listen(PORT, () => {
