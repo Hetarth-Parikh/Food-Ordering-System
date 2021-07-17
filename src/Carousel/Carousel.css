@@ -1,0 +1,14 @@
+.carousel img{
+    height: 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .carousel img{
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 530px) {
+    .carousel img{
+        height: 200px;
+    }
+}

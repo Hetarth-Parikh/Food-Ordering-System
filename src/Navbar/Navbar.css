@@ -1,0 +1,143 @@
+.navbar{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.3rem;
+  padding: 0px;
+  color: white;
+  background-color:black;
+  display: grid;
+  grid-template-columns: 0.15fr 1.5fr 1fr;
+  grid-gap: 0.5rem;
+}
+.navbar-left{
+    margin: auto;
+}
+.navbar-left img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100rem;
+    cursor: pointer;
+}
+.navbar-middle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+}
+.navbar-middle li{
+    display: inline;
+    padding: 0rem 1rem;
+    cursor: pointer;
+}
+.navbar-middle i{
+    margin: auto 5px;
+}
+.catagories{
+    color: white;
+    font-size: 1.3rem !important;
+    padding: 0 !important;
+}
+#dropdownMenuButton2{
+    box-shadow: none !important;
+}
+.navbar-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.searchbox{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    flex-direction: row;
+}
+.navbar-right input{
+    height: 1.8rem;
+    width: 12rem;
+    border: none;
+    outline: none;
+}
+.search-icon-left{
+    margin: 0px !important;
+    font-size: 0.99rem;
+    height: 1.8rem;
+    padding-left: 1.5rem !important;
+    padding-right: 0.4rem !important;
+    padding-top: 0.275rem !important;
+    background-color: white;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+.search-icon-right{
+    margin: 0px !important;
+    font-size: 0.99rem;
+    height: 1.8rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 0.45rem !important;
+    background-color: rgb(226, 152, 41);
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    cursor: pointer;
+}
+.navbar-right button{
+    margin: 0.5rem;
+    padding: 0 !important;
+    font-size: 1.3rem; 
+    background-color: black !important;
+    color: white;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+.navbar-right button:hover{
+    color:chartreuse;
+    border-radius: 0;
+}
+.navbar-right button:focus{
+    color:chartreuse;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color: chartreuse;
+}
+a.active_link{
+    color:chartreuse;
+}
+.bts{
+    display: flex;
+    margin: 0.3rem;
+}
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 0.3rem;
+  }
+  .navbar-middle{
+      justify-content: center;
+  }
+  .navbar-right{
+      justify-content: center;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .navbar {
+    grid-template-rows: 0.5fr 1.4fr 1.2fr;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 0.1rem;
+  }
+  .navbar-middle{
+    min-width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+  }
+  .navbar-right{
+    min-width: 200px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
