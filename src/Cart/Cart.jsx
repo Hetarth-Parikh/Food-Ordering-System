@@ -43,14 +43,18 @@ const Cart = () => {
             history.push('/Error');
         }
     }
-    const handleChange = (id, newQty, len) => {
-        let Q = qty;
-        qty[id] = newQty;
-        setQty(Q);
-        const tdId = 'qty' + String(id);
-        let qtyTd = document.getElementById(tdId);
-        qtyTd.innerText = qty[id];
-        calculateTotal(len);
+    const handleChange = (id, newQty, len, refresh = false) => {
+        if (refresh === true) {
+            history.go(0);
+        } else {   
+            let Q = qty;
+            qty[id] = newQty;
+            setQty(Q);
+            const tdId = 'qty' + String(id);
+            let qtyTd = document.getElementById(tdId);
+            qtyTd.innerText = qty[id];
+            calculateTotal(len);
+        }
     }
 
     const createCart = (cart) => {

@@ -35,7 +35,7 @@ const Item = () => {
             });
             const data = await res.json();
             if (res.status === 400) {
-                toast.info(data.message, {
+                toast.info("Please, login first to add item into your cart.", {
                     position: "top-right",
                     style: { "fontFamily": "Heebo" }
                 });

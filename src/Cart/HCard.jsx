@@ -19,7 +19,7 @@ const HCard = (prop) => {
             credentials: "include"
         });
         if (res.status === 200) {
-            window.location.reload();
+            prop.onChange(-1, -1, -1, true);
         } else {
             history.push('/error');
         }
